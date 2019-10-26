@@ -6,7 +6,7 @@ export default
 {
   const el=
   <Div>
-    hello budy
+    hello budy how are you
   </Div>
   return el
 }
