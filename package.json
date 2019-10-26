@@ -8,7 +8,7 @@
     "transpile-wpclient": "babel wpclient.config.js -d wp",
     "bundle-server": "npm run transpile-wpserver && webpack --config wp/wpserver.config.js",
     "bundle-client": "npm run transpile-wpclient && webpack --config wp/wpclient.config.js",
-    "start": "npm run bundle-client&& npm run bundle-server&& node",
+    "start": "npm run bundle-client&& npm run bundle-server&& node index.js",
     "bundle-server-w": "npm run transpile-wpserver && webpack -w --config wp/wpserver.config.js",
     "bundle-client-w": "npm run transpile-wpclient && webpack -w --config wp/wpclient.config.js",
     "dev": "npm run bundle-client-w & npm run bundle-server-w & nodemon"
