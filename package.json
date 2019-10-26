@@ -1,0 +1,39 @@
+{
+  "name": "wp1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "transpile-wpserver": "babel wpserver.config.js -d dist-wp",
+    "transpile-wpclient": "babel wpclient.config.js -d dist-wp",
+    "bundle-server": "npm run transpile-wpserver && webpack --config dist-wp/wpserver.config.js",
+    "bundle-client": "npm run transpile-wpclient && webpack --config dist-wp/wpclient.config.js",
+    "start": "npm run bundle-client&& npm run bundle-server&& node dist-server/bundle.js",
+    "bundle-server-w": "npm run transpile-wpserver && webpack -w --config dist-wp/wpserver.config.js",
+    "bundle-client-w": "npm run transpile-wpclient && webpack -w --config dist-wp/wpclient.config.js",
+    "dev": "npm run bundle-client-w & npm run bundle-server-w & nodemon dist-server/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "express": "^4.17.1",
+    "file-loader": "^4.2.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
+    "react-transition-group": "^4.3.0",
+    "styled-components": "^4.4.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
