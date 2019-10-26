@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "transpile-wpserver": "babel wpserver.config.js -d dist-wp",
-    "transpile-wpclient": "babel wpclient.config.js -d dist-wp",
-    "bundle-server": "npm run transpile-wpserver && webpack --config dist-wp/wpserver.config.js",
-    "bundle-client": "npm run transpile-wpclient && webpack --config dist-wp/wpclient.config.js",
-    "start": "npm run bundle-client&& npm run bundle-server&& node dist-server/bundle.js",
-    "bundle-server-w": "npm run transpile-wpserver && webpack -w --config dist-wp/wpserver.config.js",
-    "bundle-client-w": "npm run transpile-wpclient && webpack -w --config dist-wp/wpclient.config.js",
-    "dev": "npm run bundle-client-w & npm run bundle-server-w & nodemon dist-server/bundle.js"
+    "transpile-wpserver": "babel wpserver.config.js -d wp",
+    "transpile-wpclient": "babel wpclient.config.js -d wp",
+    "bundle-server": "npm run transpile-wpserver && webpack --config wp/wpserver.config.js",
+    "bundle-client": "npm run transpile-wpclient && webpack --config wp/wpclient.config.js",
+    "start": "npm run bundle-client&& npm run bundle-server&& node",
+    "bundle-server-w": "npm run transpile-wpserver && webpack -w --config wp/wpserver.config.js",
+    "bundle-client-w": "npm run transpile-wpclient && webpack -w --config wp/wpclient.config.js",
+    "dev": "npm run bundle-client-w & npm run bundle-server-w & nodemon"
   },
   "keywords": [],
   "author": "",

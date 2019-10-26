@@ -7,7 +7,7 @@ export default
   entry: './src/server/index.js',
   output:
   {
-    filename: '../dist-server/bundle.js'
+    filename: '../index.js'
   },
   module:
   {

@@ -3,7 +3,7 @@ export default
   entry: './src/client/index.js',
   output:
   {
-    filename: '../dist-client/bundle.js'
+    filename: './bundle.js'
   },
   module:
   {
@@ -21,7 +21,7 @@ export default
           loader: 'file-loader',
           options:
           {
-            name: '../dist-client/index.html',
+            name: './index.html',
           }
         }
       }

@@ -1,5 +1,4 @@
 dist
-dist-client
-dist-server
 node_modules
-dist-wp
+wp
+index.js
